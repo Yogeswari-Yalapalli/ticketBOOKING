@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ticket Reservation Form</title>
+  <link rel="stylesheet" href="Registration.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Registration Form</h2>
+    <form method="get" action="payments.html" id="reservationForm">
+      <table>
+        <tr>
+          <th colspan="2">Reservation Form</th>
+        </tr>
+        <tr>
+          <td>Enter Name</td>
+          <td><input type="text" name="name" required /></td>
+        </tr>
+        <tr>
+          <td>Enter Address</td>
+          <td><textarea name="address" rows="4" required></textarea></td>
+        </tr>
+        <tr>
+          <td>Enter Phone No</td>
+          <td><input type="tel" name="phone" pattern="[0-9]{10}" required /></td>
+        </tr>
+        <tr>
+          <td>Occupation</td>
+          <td>
+            <select name="occupation" required>
+              <option value="">Select...</option>
+              <option>Govt emp</option>
+              <option>Pvt emp</option>
+              <option>Freelancer</option>
+              <option>Contractual</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>
+            <label><input type="radio" name="gender" value="male" required /> Male</label>
+            <label><input type="radio" name="gender" value="female" /> Female</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Class of Journey</td>
+          <td>
+            <label><input type="radio" name="coj" value="FirstClass" required /> FirstClass</label>
+            <label><input type="radio" name="coj" value="FirstClassAC" /> FirstClassAC</label>
+            <label><input type="radio" name="coj" value="SecondClass" /> SecondClass</label>
+            <label><input type="radio" name="coj" value="SecondClassAC" /> SecondClassAC</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Source City</td>
+          <td>
+            <select name="source" required>
+              <option value="">Select...</option>
+              <option>Banglore</option>
+              <option>Chennai</option>
+              <option>Hyderabad</option>
+              <option>Haryana</option>
+              <option>Delhi</option>
+              <option>Mumbai</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Destination City</td>
+          <td>
+            <select name="destination" required>
+              <option value="">Select...</option>
+              <option>Banglore</option>
+              <option>Chennai</option>
+              <option>Hyderabad</option>
+              <option>Haryana</option>
+              <option>Delhi</option>
+              <option>Mumbai</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Date of Journey</td>
+          <td><input type="date" name="date" required /></td>
+        </tr>
+        <tr>
+          <td>Number of Tickets</td>
+          <td><input type="number" name="tickets" min="1" max="6" required /></td>
+        </tr>
+        <tr>
+          <td>Preferences</td>
+          <td>
+            <label><input type="checkbox" name="pref" value="Wifi" /> Wifi</label>
+            <label><input type="checkbox" name="pref" value="Veg" /> Veg</label>
+            <label><input type="checkbox" name="pref" value="Nonveg" /> Nonveg</label>
+            <label><input type="checkbox" name="pref" value="Washroom" /> Washroom</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Color of Ticket</td>
+          <td><input type="color" name="ticketColor" /></td>
+        </tr>
+        <tr>
+          <td>Rate the Site</td>
+          <td><input type="range" name="rating" min="1" max="5" /></td>
+        </tr>
+        <tr>
+          <td><input type="submit" value="Reserve" /></td>
+          <td><input type="reset" value="Reset" /></td>
+        </tr>
+      </table>
+    </form>
+    <p id="message"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
